@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+	    <title>VIRTUAL QUEUE/Staff login</title>
+
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/staff_background.css">
+     </head>
+		<body>
+		    <div class="looks"></div>
+			<header>
+			    <div><img  src="/static/chandigarh-university-seal.png"></div>
+				    <div class="container">
+				        <h1 class="titlebar col-xl-12">
+				        VIRTUAL QUEUE
+				        </h1>
+                    </div>
+				<div class="container">
+				    <div class="second_title">
+			            <div class="home">A Comfortable Way to be in Queue</div>
+		             </div>
+                </div>
+			</header>
+            <div class="container">
+				<form action="staff"  method="post">
+				     {% csrf_token %}
+                   		<div class="form-group">
+                   			<div class="User_Name">
+                   			    <label for="exampleInputName">User Name:</label>
+                   			    <input name="username" type="text" class="form-control" id="id_username" placeholder="Enter username" required="" maxlength="30">
+                            </div>
+                            <div class="Password">
+							      <label for="exampleInputPassword">Password:</label>
+                                  <input name="password" type="password" class="form-control" id="id_password" placeholder="Enter Password" required="" maxlength="30">
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="padding:15px 50px; display:block; margin: 0 auto;">
+                                Log in
+                            </button>
+                        </div>
+                </form>
+            </div>
+            <a href="{% url password_reset %}">Forgot password?
+        </a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
