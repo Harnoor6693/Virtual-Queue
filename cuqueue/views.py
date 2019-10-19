@@ -8,6 +8,8 @@ from django.contrib.auth import authenticate,login
 from django.contrib import messages
 import random,string
 import pyqrcode
+import numpy as np
+import pandas as pd
 
 
 min_ch=0
